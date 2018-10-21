@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Keshav Sharma - Personal Resume</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
+
+
+<script type='text/javascript' src="js/jquery.min.js"></script>	
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+
+</head>
+
+<body>
+<div id="header">
+	<div id="logo"><a href="#">Keshav Sharma</a></div>
+	<ul id="main-menu">
+    	<li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#work">Leisure Time</a></li>       
+        <li><a href="#connect">Connect</a></li>
+    </ul>
+</div>
+
+<div id="container">
+
+<!--Begin About Section-->
+    <div id="about">
+    	<h1>About</h1>
+        <ul id="top-social">
+        	<!--<li><a href="#" class="facebook">Facebook</a></li>-->
+<!--            <li><a href="#" class="twitter">Twitter</a></li>-->
+            <li><a  href="www.linkedin.com/in/kshvsharma980"  class="linkedin">LinkedIn</a></li>
+        </ul>
+        <div class="top-divider"></div>
+        <div class="content">
+        	<img src="images/designer-photo.jpg" />
+            <h2>My Name is Keshav Sharma, and I am a Technology Loving Person</h2>
+            <p>To work  in a challenging  environment  demanding  techniques  contributing  to collective  development  of  the  Techno – World. </p> 
+            <ul id="service-icons">
+            	<li class="services-design">GIS</li>
+                <li class="services-mobile">ARDUINO</li>
+                <li class="services-film">VS</li>
+                <li class="services-photo">Azure</li>
+            </ul>
+        </div>
+    <div class="bottom-divider"></div> 
+    </div>
+<!--End About Section-->
+
+<!--Begin Experience Section-->   
+    <div id="experience">
+    	<h1>Experience</h1>
+        <div class="top-divider"></div>
+        <div class="content">
+            <div class="col">
+            <h2>Description of Work</h2>
+            <p>Working with a Reputed Fortune 300 company for last <span class='yearExp'></span> yrs</p>
+            <p>For the last <span class='yearExp'></span>, I am leaning a lot in area of Technology,
+		 coding skills and strategies to tackle firm challenges.</p>
+            </div>
+            
+            <div class="col col-mid">
+            <h2>Description of Life</h2>
+            <p> Love to go around to mean new personalities. As everyone has unique form of energy from which we can earn great experience and wisdom </p>
+            <p> From breaking the ice to greeting strangers in morning during park-jogging(old age people mostly, to be at safe side :P) are some of my new habits now.  </p>
+            <p> Time management and Focused-Working is yet to master.  </p>
+
+            </div>
+            
+            <div class="col">
+            <h2>Description of Hobbies</h2>
+            <p> <strong>Solution Exploring</strong>: If i get a problem, i like to search fr resolution. </p>
+            <p> <strong>Geographic Information System Exploring</strong>: This Map thing used to excite me since I Got to know about Google Maps. And see God gave me opportunity to work on ArcGIS out of the blue. Now in love with it. </p>
+            <p> <strong>Arduino Exploring</strong>: Developing solutions with available embedded solutions. Checkout:<a style=" font-size: 16px; color: blue;" href="https://www.youtube.com/watch?v=jMihqWYhZsA" >HomeAutomation</a> </p>
+            </div>
+        </div>    
+        <div class="bottom-divider"></div>
+    </div>
+<!--End Experience Section-->
+
+<!--Begin Work Section-->  
+    <div id="work" style="display:block">
+    	<h1 onclick="reloadGame();">Leisure Time</h1>
+
+        <div class="top-divider"></div>
+        	<div class="content">
+<iframe id="game" style="width:859px;height:600px" src="fly.html">
+  <p>Your browser does not support iframes.</p>
+</iframe>            </div>
+        <div class="bottom-divider"></div>
+    </div>
+<!--End Work Section-->
+
+<!--Begin Connect Section-->  
+    <div id="connect">
+    	<h1>Connect</h1>
+        <div class="top-divider"></div>
+        	<div class="content">
+            	<div id="form">
+                	<form action="#">
+                    	<span>Name</span>
+                        <input type="text" name="name" class="name" />
+                        <span>Email</span>
+                        <input type="text" name="email" class="email"/>
+                        <span>Message</span>
+                        <textarea class="message"></textarea>
+                        <input type="submit" name="submite" value="Submit" class="submit">
+                    </form>
+                </div>
+                <div id="social-footer">
+                	<h2>Follow Me:</h2>
+                    <p> Thanks for sparing your valuable time on my short description. Hope it worth your time. Feel free to connect me on LinkedIn  </p>
+                    <ul id="sm-links">
+                    	<!-- <li><a href="#" class="facebook">Facebook</a></li>-->
+           			<!--	<li><a href="#" class="twitter">Twitter</a></li>-->
+<!--            			<li><a href="#" class="dribble">Dribble</a></li>-->
+<!--                        <li><a href="#" class="vimeo">Vimeo</a></li>-->
+<!--                        <li><a href="#" class="youtube">YouTube</a></li>-->
+                        <li><a href="www.linkedin.com/in/kshvsharma980" class="linkedin">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+<!--End Connect Section--> 
+
+</div>
+
+ <!-- The JavaScript -->  
+        <script type="text/javascript">
+    		$(function() {
+                $('#main-menu li a').bind('click',function(event){
+                    var $anchor = $(this);
+                    
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1500,'easeInOutExpo');
+
+                    event.preventDefault();
+                });
+            });
+			
+ 			 $(document).ready(function(){
+    		$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false, deeplinking: false});
+  			});
+
+        </script>
+
+<script type="text/javascript" src="resume.js"></script>
+
+</body>
+</html>
